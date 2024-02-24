@@ -253,6 +253,7 @@ if __name__ == '__main__':
     parser.add_argument('-batchsize','--batch_size', help='Batch size for training', required=False, default=8)
     parser.add_argument('-ratio','--subset_ratio', help='subset_ratio of the dataset to be used as subset', required=False, default=0.1)
     parser.add_argument('-project','--project_name', help='Name of the project', required=False, default="MyProject")
+    parser.add_argument('-dataset','--dataset_folder', help='Path to the dataset folder', required=False,default="/home/edramos/Documents/MLOPS/ImageClassification-MFG/things-8")
 
     args = parser.parse_args()
 
@@ -262,11 +263,13 @@ if __name__ == '__main__':
     lr = args.lr
     batch_size = args.batch_size
     subset_ratio = args.subset_ratio
+    project_name = args.project_name
 
     print(n_splits)
 
 
-    dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
+    #dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
+    dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/things-8'
     image_size = (224, 224)  # Example image size
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio)
 
@@ -286,7 +289,7 @@ if __name__ == '__main__':
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size,subset_ratio)
     test_loader = data_loaders['test']
     for architecture in architectures:
-        model, optimizer, scheduler =train_model_kfold(subset_dataset, architecture, lr,n_splits,epochs, num_classes, batch_size)
+        model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
 
     test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
     
