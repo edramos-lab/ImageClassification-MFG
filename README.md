@@ -122,9 +122,8 @@ Functions:
             - batch_size: The batch size used during testing.
             - image_size: The image size used during testing.
 
-Author:
-    [Your Name]
+Edgar Rene Ramos Acosta
 
 Date:
-    [Last Modified Date]
+    [24-Feb-2024 12:01]
 """
