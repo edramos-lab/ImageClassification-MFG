@@ -1,8 +1,3 @@
-'''from roboflow import Roboflow
-rf = Roboflow(api_key="Zj3z1BE0KBeUDmEdARjg")
-project = rf.workspace("edgar-rene-ramos-acosta-uabc-edu-mx").project("nigel-chassises")
-dataset = project.version(1).download("folder")'''
-
 
 from matplotlib import pyplot as plt
 from torchvision.datasets import ImageFolder
@@ -141,6 +136,7 @@ def train_model_kfold(subset_dataset, architecture, n_splits,epochs, num_classes
                 "val_accuracy": 100.0 * val_correct / val_total,
             })
         scheduler.step()
+    return model, optimizer, scheduler
 
 def test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -256,8 +252,8 @@ if __name__ == '__main__':
     #architectures = ["efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"]
     architectures = ["convnextv2_tiny"]
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size)
-
+    test_loader = data_loaders['test']
     for architecture in architectures:
-        train_model_kfold(subset_dataset, architecture, n_splits,epochs, num_classes, batch_size)
-
+        model, optimizer, scheduler =train_model_kfold(subset_dataset, architecture, n_splits,epochs, num_classes, batch_size)
     
+    test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)

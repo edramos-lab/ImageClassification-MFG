@@ -1,8 +1,8 @@
 {
     "os": "Linux-5.15.0-67-generic-x86_64-with-glibc2.31",
     "python": "3.9.16",
-    "heartbeatAt": "2024-02-24T05:05:27.464072",
-    "startedAt": "2024-02-24T05:05:27.399477",
+    "heartbeatAt": "2024-02-24T05:43:46.421378",
+    "startedAt": "2024-02-24T05:43:46.372967",
     "docker": null,
     "cuda": null,
     "args": [],
@@ -11,7 +11,7 @@
     "codePath": "main.py",
     "git": {
         "remote": "https://github.com/edramos-lab/ImageClassification-MFG.git",
-        "commit": "0c9e468400bd3e5267f3a77af122ac81ff7ac051"
+        "commit": "376de2f5e6cf75486b1d86eb1973d68dc02bcf21"
     },
     "email": "edgar.rene.ramos.acosta@uabc.edu.mx",
     "root": "/home/edramos/Documents/MLOPS/ImageClassification-MFG",
@@ -21,7 +21,7 @@
     "cpu_count": 8,
     "cpu_count_logical": 16,
     "cpu_freq": {
-        "current": 2435.9964375,
+        "current": 2295.909,
         "min": 800.0,
         "max": 4600.0
     },
@@ -57,12 +57,12 @@
             "max": 4600.0
         },
         {
-            "current": 4063.182,
+            "current": 2300.0,
             "min": 800.0,
             "max": 4600.0
         },
         {
-            "current": 2300.0,
+            "current": 2234.544,
             "min": 800.0,
             "max": 4600.0
         },
@@ -109,7 +109,7 @@
     ],
     "disk": {
         "total": 877.3084297180176,
-        "used": 134.6351089477539
+        "used": 134.63599014282227
     },
     "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
     "gpu_count": 1,
