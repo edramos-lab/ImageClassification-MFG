@@ -251,6 +251,8 @@ if __name__ == '__main__':
 
     print(args.n_splits)
 
+    # Commented code block
+    """
     dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
     image_size = (224, 224)  # Example image size
     batch_size = 8  # Example batch size
@@ -275,5 +277,6 @@ if __name__ == '__main__':
     test_loader = data_loaders['test']
     for architecture in architectures:
         model, optimizer, scheduler =train_model_kfold(subset_dataset, architecture, n_splits,epochs, num_classes, batch_size)
-    
+
     test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
+    """
