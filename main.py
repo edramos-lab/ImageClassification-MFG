@@ -18,6 +18,8 @@ from sklearn.model_selection import KFold
 import wandb
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, precision_score, recall_score, f1_score, matthews_corrcoef
 import seaborn as sns
+import argparse
+
 
 
 def preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio=0.1):
@@ -243,6 +245,12 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
     
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False)
+    args = parser.parse_args()
+
+    print(args.n_splits)
+
     dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
     image_size = (224, 224)  # Example image size
     batch_size = 8  # Example batch size
