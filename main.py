@@ -4,6 +4,7 @@ project = rf.workspace("edgar-rene-ramos-acosta-uabc-edu-mx").project("nigel-cha
 dataset = project.version(1).download("folder")'''
 
 
+from matplotlib import pyplot as plt
 from torchvision.datasets import ImageFolder
 from torchvision.transforms import Compose, Resize, RandomHorizontalFlip, RandomVerticalFlip, RandomRotation, ColorJitter, ToTensor, Normalize
 from torch.utils.data import DataLoader, Subset
@@ -19,7 +20,8 @@ from torchvision.transforms import Compose, Resize, RandomHorizontalFlip, Random
 from collections import Counter
 from sklearn.model_selection import KFold
 import wandb
-from sklearn.metrics import accuracy_score, confusion_matrix, precision_score, recall_score, f1_score, matthews_corrcoef
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, precision_score, recall_score, f1_score, matthews_corrcoef
+import seaborn as sns
 
 
 def preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio=0.1):
@@ -180,22 +182,20 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
     matthews_corr = 100 * matthews_corrcoef(true_labels, predicted_labels)
 
     # Log metrics
-    import matplotlib.pyplot as plt
 
     # Calculate the confusion matrix
     confusion = confusion_matrix(true_labels, predicted_labels)
 
     # Plot and save the confusion matrix as a .png file
     plt.figure(figsize=(8, 6))
-    plt.imshow(confusion, cmap=plt.cm.Blues)
+    sns.heatmap(confusion, annot=True, fmt="d", cmap="Blues")
     plt.title("Confusion Matrix")
-    plt.colorbar()
-    tick_marks = np.arange(num_classes)
-    plt.xticks(tick_marks, [str(i) for i in range(num_classes)])
-    plt.yticks(tick_marks, [str(i) for i in range(num_classes)])
     plt.xlabel("Predicted Label")
     plt.ylabel("True Label")
     plt.savefig("confusion_matrix.png")
+
+    # Generate the confusion report
+    confusion_report = classification_report(true_labels, predicted_labels)
 
     wandb.log({
         "Test Accuracy": test_accuracy,
@@ -203,7 +203,8 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
         "Test Recall": test_recall,
         "Test F1 Score": test_f1_score,
         "Matthews Correlation Coefficient": matthews_corr,
-        "Confusion Matrix": wandb.Image("confusion_matrix.png")
+        "Confusion Matrix": wandb.Image("confusion_matrix.png"),
+        "Confusion Report": confusion_report
     })
 
     print("Test accuracy: %.3f" % test_accuracy)
@@ -236,8 +237,8 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
 if __name__ == '__main__':
     dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
     image_size = (224, 224)  # Example image size
-    batch_size = 2  # Example batch size
-    n_splits=1
+    batch_size = 8  # Example batch size
+    n_splits=2
     epochs = 10
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size)
 
