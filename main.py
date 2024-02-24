@@ -22,7 +22,7 @@ import argparse
 
 
 
-def preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio=0.1):
+def preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio):
     """
     Preprocesses the dataset, loads it into DataLoader, and creates a balanced subset of the training dataset.
 
@@ -84,17 +84,17 @@ def preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_rati
     }, subset_dataset, balancing_efficiency, num_classes
 
 
-def train_model_kfold(subset_dataset, architecture, n_splits,epochs, num_classes, batch_size):
+def train_model_kfold(subset_dataset, project_name,architecture,lr, n_splits,epochs, num_classes, batch_size):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
-    wandb.init(project="Research-ER1-zinc-plated-022024", config={"architecture": architecture, "epochs": epochs, "batch_size": batch_size})
+    wandb.init(project=project_name, config={"architecture": architecture, "epochs": epochs, "batch_size": batch_size})
 
     for fold, (train_idx, val_idx) in enumerate(kf.split(subset_dataset)):
         print(f"Training fold {fold+1} for {architecture}")
         
         # Model initialization
         model = timm.create_model(architecture, pretrained=True, num_classes=num_classes).to(device)
-        optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
+        optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-5)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
         criterion = nn.CrossEntropyLoss()
 
@@ -246,19 +246,29 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False)
+    parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False, default=2)
+    parser.add_argument('-epochs','--epochs', help='Number of epochs for training', required=False, default=10)
+    parser.add_argument('-model','--model', help='Name of the model architecture: "efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"', required=False, default="efficientnet_b0")
+    parser.add_argument('-lr','--lr', help='Learning rate for the optimizer', required=False, default=0.0001)
+    parser.add_argument('-batchsize','--batch_size', help='Batch size for training', required=False, default=8)
+    parser.add_argument('-ratio','--subset_ratio', help='subset_ratio of the dataset to be used as subset', required=False, default=0.1)
+    parser.add_argument('-project','--project_name', help='Name of the project', required=False, default="MyProject")
+
     args = parser.parse_args()
 
-    print(args.n_splits)
+    n_splits = args.n_splits
+    epochs = args.epochs
+    model = args.model
+    lr = args.lr
+    batch_size = args.batch_size
+    subset_ratio = args.subset_ratio
 
-    # Commented code block
-    """
+    print(n_splits)
+
+
     dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
     image_size = (224, 224)  # Example image size
-    batch_size = 8  # Example batch size
-    n_splits=2
-    epochs = 10
-    data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size)
+    data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio)
 
     # Example of how to use the data_loaders and subset_dataset
     print(f"Number of classes: {num_classes}")
@@ -273,10 +283,10 @@ if __name__ == '__main__':
 
     #architectures = ["efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"]
     architectures = ["efficientnet_b0"]
-    data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size)
+    data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size,subset_ratio)
     test_loader = data_loaders['test']
     for architecture in architectures:
-        model, optimizer, scheduler =train_model_kfold(subset_dataset, architecture, n_splits,epochs, num_classes, batch_size)
+        model, optimizer, scheduler =train_model_kfold(subset_dataset, architecture, lr,n_splits,epochs, num_classes, batch_size)
 
     test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
-    """
+    
