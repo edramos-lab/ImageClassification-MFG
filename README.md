@@ -3,7 +3,7 @@
 main.py
 
 Description:
-    This script is designed to perform "image classification on the zinc-plated components dataset using pre-trained ConvNeXt models ".
+    This script is designed to perform "image classification on the any unbalanced custom dataset using pre-trained ConvNeXt models ".
 
 Dependencies:
     - Python 3.x

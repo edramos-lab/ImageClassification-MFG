@@ -1,5 +1,6 @@
 
 from matplotlib import pyplot as plt
+import pandas as pd
 from torchvision.datasets import ImageFolder
 from torchvision.transforms import Compose, Resize, RandomHorizontalFlip, RandomVerticalFlip, RandomRotation, ColorJitter, ToTensor, Normalize
 from torch.utils.data import DataLoader, Subset
@@ -182,6 +183,12 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
     # Calculate the confusion matrix
     confusion = confusion_matrix(true_labels, predicted_labels)
 
+    # Convert the confusion matrix to a DataFrame
+    confusion_df = pd.DataFrame(confusion)
+
+    # Save the DataFrame as a CSV file
+    confusion_df.to_csv("confusion_matrix.csv", index=False)
+
     # Plot and save the confusion matrix as a .png file
     plt.figure(figsize=(8, 6))
     sns.heatmap(confusion, annot=True, fmt="d", cmap="Blues")
@@ -192,6 +199,11 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
 
     # Generate the confusion report
     confusion_report = classification_report(true_labels, predicted_labels)
+
+    # Save the classification report to a text file
+    report_filename = f"classification_report_{architecture}.txt"
+    with open(report_filename, "w") as report_file:
+        report_file.write(confusion_report)
 
     wandb.log({
         "Test Accuracy": test_accuracy,
@@ -250,7 +262,7 @@ if __name__ == '__main__':
         break  # Just to show the first batch from the subset
 
     #architectures = ["efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"]
-    architectures = ["convnextv2_tiny"]
+    architectures = ["efficientnet_b0"]
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size)
     test_loader = data_loaders['test']
     for architecture in architectures:
