@@ -1,0 +1,13 @@
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_setup.py:_flush():68] Configure stats pid to 162835
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_setup.py:_flush():68] Loading settings from /home/edramos/.config/wandb/settings
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_setup.py:_flush():68] Loading settings from /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/settings
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py'}
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_setup.py:_flush():68] Applying login settings: {'mode': 'offline'}
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_init.py:_log_setup():492] Logging user logs to /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/offline-run-20240223_202652-1x2zq5xg/logs/debug.log
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_init.py:_log_setup():493] Logging internal logs to /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/offline-run-20240223_202652-1x2zq5xg/logs/debug-internal.log
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_init.py:init():532] calling init triggers
+2024-02-23 20:26:52,122 INFO    MainThread:162835 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'architecture': 'convnextv2_tiny', 'epochs': 10, 'batch_size': 1}
+2024-02-23 20:26:52,123 INFO    MainThread:162835 [wandb_init.py:init():583] wandb.init() called when a run is still active
+2024-02-23 20:45:31,755 WARNING MsgRouterThr:162835 [router.py:message_loop():77] message_loop has been closed
