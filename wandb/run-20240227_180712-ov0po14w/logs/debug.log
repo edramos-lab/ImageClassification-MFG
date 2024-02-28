@@ -23,3 +23,4 @@ config: {'architecture': 'deit3_base_patch16_224', 'epochs': 10, 'batch_size': 4
 2024-02-27 18:07:23,635 INFO    MainThread:672123 [wandb_run.py:_redirect():2034] Wrapping output streams.
 2024-02-27 18:07:23,635 INFO    MainThread:672123 [wandb_run.py:_redirect():2059] Redirects installed.
 2024-02-27 18:07:23,635 INFO    MainThread:672123 [wandb_init.py:init():817] run started, returning control to user process
+2024-02-27 19:07:32,789 WARNING MsgRouterThr:672123 [router.py:message_loop():77] message_loop has been closed
