@@ -369,8 +369,14 @@ if __name__ == '__main__':
     model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size,subset_ratio)
     test_loader = data_loaders['test']
+<<<<<<< HEAD
     '''for architecture in architectures:
         model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
     '''
+=======
+    for architecture in architectures:
+        model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
+
+>>>>>>> 7eb3ba843a5eb4a2139d81d8238b657d0ea9496f
     test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
     
