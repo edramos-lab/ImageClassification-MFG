@@ -1,0 +1,31 @@
+
+Training fold 1 for efficientnet_b0
+Training fold 2 for efficientnet_b0
+Training fold 3 for efficientnet_b0
+Training fold 4 for efficientnet_b0
+Training fold 5 for efficientnet_b0
+Test accuracy: 48.333
+Confusion Matrix:
+ [[4 2 0 0 0 0 0 1 0 1 0]
+ [4 4 0 0 0 0 0 0 0 0 0]
+ [0 0 1 0 0 0 0 1 0 0 0]
+ [1 0 1 2 0 0 0 0 0 0 0]
+ [1 0 0 1 1 1 0 0 0 1 0]
+ [0 0 0 0 0 0 0 0 0 1 0]
+ [0 0 0 0 0 0 2 1 0 0 0]
+ [0 0 0 0 0 0 0 7 0 0 0]
+ [0 0 0 0 0 0 0 2 1 0 0]
+ [4 1 0 0 0 1 2 2 0 6 0]
+ [0 0 0 0 0 0 0 1 1 0 1]]
+Test Precision: 59.095238
+Test Recall: 48.333333
+Test F1 Score: 47.794949
+Matthews Correlation Coefficient: 41.910915
+Traceback (most recent call last):
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 371, in <module>
+    test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 244, in test_model
+    roc_fig = auroc(model, test_loader, N_classes=6)
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 261, in auroc
+    y_test.append(F.one_hot(classes, N_classes).numpy())
+RuntimeError: Class values must be smaller than num_classes.

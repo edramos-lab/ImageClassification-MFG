@@ -1,0 +1,921 @@
+2024-02-24 15:32:18,346 INFO    StreamThr :87725 [internal.py:wandb_internal():87] W&B internal server running at pid: 87725, started at: 2024-02-24 15:32:18.345739
+2024-02-24 15:32:18,347 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status
+2024-02-24 15:32:18,348 INFO    WriterThread:87725 [datastore.py:open_for_write():85] open: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/run-do900m94.wandb
+2024-02-24 15:32:18,348 DEBUG   SenderThread:87725 [sender.py:send():336] send: header
+2024-02-24 15:32:18,359 DEBUG   SenderThread:87725 [sender.py:send():336] send: run
+2024-02-24 15:32:18,745 INFO    SenderThread:87725 [dir_watcher.py:__init__():216] watching files in: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files
+2024-02-24 15:32:18,746 INFO    SenderThread:87725 [sender.py:_start_run_threads():1067] run started: do900m94 with start time 1708817538.345124
+2024-02-24 15:32:18,746 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:32:18,746 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:32:18,750 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: check_version
+2024-02-24 15:32:18,751 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: check_version
+2024-02-24 15:32:18,900 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: run_start
+2024-02-24 15:32:18,910 DEBUG   HandlerThread:87725 [system_info.py:__init__():31] System info init
+2024-02-24 15:32:18,910 DEBUG   HandlerThread:87725 [system_info.py:__init__():46] System info init done
+2024-02-24 15:32:18,910 INFO    HandlerThread:87725 [system_monitor.py:start():151] Starting system monitor
+2024-02-24 15:32:18,910 INFO    SystemMonitor:87725 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2024-02-24 15:32:18,910 INFO    HandlerThread:87725 [system_monitor.py:probe():172] Collecting system info
+2024-02-24 15:32:18,911 INFO    SystemMonitor:87725 [interfaces.py:start():168] Started cpu
+2024-02-24 15:32:18,911 INFO    SystemMonitor:87725 [interfaces.py:start():168] Started disk
+2024-02-24 15:32:18,911 INFO    SystemMonitor:87725 [interfaces.py:start():168] Started gpu
+2024-02-24 15:32:18,912 INFO    SystemMonitor:87725 [interfaces.py:start():168] Started memory
+2024-02-24 15:32:18,912 INFO    SystemMonitor:87725 [interfaces.py:start():168] Started network
+2024-02-24 15:32:18,937 DEBUG   HandlerThread:87725 [system_info.py:probe():195] Probing system
+2024-02-24 15:32:18,945 DEBUG   HandlerThread:87725 [system_info.py:_probe_git():180] Probing git
+2024-02-24 15:32:18,956 DEBUG   HandlerThread:87725 [system_info.py:_probe_git():188] Probing git done
+2024-02-24 15:32:18,956 DEBUG   HandlerThread:87725 [system_info.py:probe():241] Probing system done
+2024-02-24 15:32:18,956 DEBUG   HandlerThread:87725 [system_monitor.py:probe():181] {'os': 'Linux-5.15.0-97-generic-x86_64-with-glibc2.31', 'python': '3.9.16', 'heartbeatAt': '2024-02-24T23:32:18.937878', 'startedAt': '2024-02-24T23:32:18.339760', 'docker': None, 'cuda': None, 'args': ('-lr', '0.0001', '-model', 'deit3_base_patch16_224', '-ratio', '0.95', '-batchsize', '2', '-batchsize', '4'), 'state': 'running', 'program': '/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/edramos-lab/ImageClassification-MFG.git', 'commit': '7eb3ba843a5eb4a2139d81d8238b657d0ea9496f'}, 'email': 'edgar.rene.ramos.acosta@uabc.edu.mx', 'root': '/home/edramos/Documents/MLOPS/ImageClassification-MFG', 'host': 'edramos-nitro5', 'username': 'edramos', 'executable': '/home/edramos/miniconda3/envs/tf/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2227.44, 'min': 800.0, 'max': 4600.0}, 'cpu_freq_per_core': [{'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 1139.04, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}], 'disk': {'total': 877.3084297180176, 'used': 147.58655166625977}, 'gpu': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 31.122295379638672}}
+2024-02-24 15:32:18,956 INFO    HandlerThread:87725 [system_monitor.py:probe():182] Finished collecting system info
+2024-02-24 15:32:18,956 INFO    HandlerThread:87725 [system_monitor.py:probe():185] Publishing system info
+2024-02-24 15:32:18,956 DEBUG   HandlerThread:87725 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-02-24 15:32:18,957 DEBUG   HandlerThread:87725 [system_info.py:_save_pip():67] Saving pip packages done
+2024-02-24 15:32:18,957 DEBUG   HandlerThread:87725 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-02-24 15:32:19,746 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/requirements.txt
+2024-02-24 15:32:19,746 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/conda-environment.yaml
+2024-02-24 15:32:19,747 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:32:22,232 DEBUG   HandlerThread:87725 [system_info.py:_save_conda():86] Saving conda packages done
+2024-02-24 15:32:22,232 INFO    HandlerThread:87725 [system_monitor.py:probe():187] Finished publishing system info
+2024-02-24 15:32:22,234 DEBUG   SenderThread:87725 [sender.py:send():336] send: files
+2024-02-24 15:32:22,234 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2024-02-24 15:32:22,236 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-24 15:32:22,237 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: stop_status
+2024-02-24 15:32:22,399 DEBUG   SenderThread:87725 [sender.py:send():336] send: telemetry
+2024-02-24 15:32:22,746 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/conda-environment.yaml
+2024-02-24 15:32:22,746 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-metadata.json
+2024-02-24 15:32:22,747 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:32:23,401 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:32:23,848 INFO    wandb-upload_0:87725 [upload_job.py:push():138] Uploaded file /tmp/tmp7756m6dwwandb/0ynk8ekx-wandb-metadata.json
+2024-02-24 15:32:24,748 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:32:28,402 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:32:33,403 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:32:37,236 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:32:38,404 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:32:42,237 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:32:43,404 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:32:47,237 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:32:48,407 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:32:48,755 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/config.yaml
+2024-02-24 15:32:52,238 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:32:53,621 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:32:54,219 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:32:54,220 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:32:54,220 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:32:54,222 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:32:54,757 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:32:57,238 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:32:59,222 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:02,239 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:04,223 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:07,239 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:09,223 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:12,240 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:13,411 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:33:13,412 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:33:13,412 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:33:13,413 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:33:13,761 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:33:14,414 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:17,240 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:18,912 DEBUG   SystemMonitor:87725 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2024-02-24 15:33:18,913 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:33:19,913 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:22,241 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:24,914 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:27,242 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:29,914 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:32,242 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:32,757 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:33:32,757 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:33:32,757 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:33:32,758 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:33:32,764 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:33:35,758 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:37,243 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:40,759 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:42,244 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:45,759 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:47,244 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:48,913 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:33:50,914 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:52,096 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:33:52,097 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:33:52,097 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:33:52,097 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:33:52,245 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:33:52,768 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:33:56,098 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:33:57,245 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:01,098 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:02,246 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:06,099 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:07,246 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:11,099 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:11,254 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:34:11,255 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:34:11,255 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:34:11,255 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:34:11,772 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:34:12,247 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:16,256 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:17,247 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:18,914 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:34:21,914 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:22,248 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:26,915 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:27,248 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:30,144 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:34:30,145 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:34:30,145 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:34:30,146 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:34:30,776 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:34:32,147 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:32,249 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:37,147 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:37,250 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:42,148 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:42,250 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:47,148 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:47,251 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:48,914 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:34:49,041 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:34:49,041 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:34:49,041 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:34:49,041 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:34:49,780 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:34:52,251 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:53,042 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:34:57,252 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:34:58,042 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:02,252 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:03,043 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:07,253 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:07,965 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:35:07,966 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:35:07,966 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:35:07,967 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:35:08,784 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:35:08,967 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:12,254 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:13,968 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:17,254 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:18,915 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:35:19,915 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:22,255 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:24,916 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:26,905 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:35:26,905 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:35:26,906 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:35:26,906 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:35:27,255 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:27,788 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:35:30,906 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:32,256 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:35,907 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:37,256 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:40,907 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:42,257 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:45,850 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:35:45,850 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:35:45,850 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:35:45,851 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:35:46,792 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:35:46,792 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:35:46,851 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:47,257 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:48,915 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:35:51,916 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:52,258 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:35:56,916 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:35:57,258 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:01,917 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:02,259 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:05,868 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:36:05,868 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:36:05,869 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:36:05,870 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:36:06,796 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:36:07,260 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:07,870 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:12,260 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:12,871 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:17,261 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:17,871 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:18,916 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:36:22,261 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:22,916 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:24,932 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:36:24,933 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:36:24,933 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:36:24,933 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:36:25,800 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:36:27,262 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:27,934 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:32,263 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:32,934 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:37,263 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:37,934 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:42,264 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:42,935 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:44,014 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:36:44,014 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:36:44,015 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:36:44,015 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:36:44,804 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:36:47,264 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:48,015 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:48,916 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:36:52,265 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:53,917 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:36:57,265 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:36:58,917 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:02,266 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:03,111 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:37:03,111 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:37:03,111 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:37:03,113 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:37:03,808 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:37:04,113 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:07,267 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:09,114 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:12,267 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:14,114 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:17,268 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:18,916 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:37:19,917 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:22,213 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:37:22,213 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:37:22,214 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:37:22,214 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:37:22,268 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:22,811 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:37:25,214 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:27,269 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:30,215 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:32,269 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:35,215 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:37,270 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:40,216 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:41,268 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:37:41,269 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:37:41,269 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:37:41,270 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:37:41,815 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:37:42,270 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:45,271 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:47,271 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:48,917 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:37:50,918 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:52,271 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:37:55,918 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:37:57,272 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:00,297 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:38:00,297 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:38:00,298 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:38:00,298 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:38:00,819 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:38:01,298 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:02,273 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:06,298 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:07,273 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:11,299 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:12,274 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:16,299 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:17,274 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:18,917 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:38:19,408 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:38:19,408 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:38:19,409 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:38:19,409 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:38:19,823 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:38:21,409 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:22,275 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:26,410 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:27,275 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:31,410 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:32,276 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:36,411 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:37,276 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:38,512 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:38:38,512 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:38:38,513 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:38:38,513 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:38:38,827 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:38:41,513 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:42,277 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:46,514 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:47,278 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:48,918 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:38:51,919 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:52,278 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:56,919 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:38:57,279 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:38:57,642 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:38:57,642 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:38:57,642 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:38:57,642 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:38:57,831 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:38:58,831 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:39:02,279 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:02,643 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:07,280 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:07,644 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:12,280 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:12,644 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:17,281 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:17,645 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:17,765 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:39:17,765 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:39:17,766 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:39:17,766 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:39:17,835 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:39:18,918 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:39:22,282 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:22,919 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:27,282 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:27,919 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:32,283 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:32,920 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:36,867 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:39:36,868 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:39:36,868 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:39:36,868 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:39:37,283 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:37,839 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:39:38,868 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:42,284 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:43,869 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:47,284 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:48,869 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:48,919 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:39:52,285 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:53,919 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:39:55,980 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:39:55,980 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:39:55,981 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:39:55,981 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:39:56,843 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:39:57,286 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:39:58,981 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:02,287 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:03,982 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:07,287 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:08,982 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:12,288 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:13,983 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:15,146 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:40:15,147 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:40:15,147 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:40:15,147 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:40:15,847 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:40:17,288 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:18,919 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:40:19,920 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:22,289 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:24,920 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:27,289 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:29,921 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:32,290 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:34,278 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:40:34,279 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:40:34,279 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:40:34,279 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:40:34,851 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:40:35,279 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:37,290 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:40,280 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:42,291 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:45,280 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:47,291 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:48,920 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:40:50,920 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:52,292 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:40:53,421 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:40:53,422 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:40:53,422 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:40:53,422 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:40:53,855 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:40:56,423 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:40:57,292 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:01,423 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:02,293 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:06,424 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:07,294 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:11,424 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:12,294 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:12,546 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:41:12,547 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:41:12,547 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:41:12,547 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:41:12,859 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:41:16,547 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:17,295 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:18,920 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:41:21,921 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:22,295 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:26,921 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:27,296 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:31,654 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:41:31,655 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:41:31,655 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:41:31,655 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:41:31,863 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:41:32,297 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:32,656 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:37,297 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:37,656 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:42,298 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:42,657 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:47,298 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:47,657 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:48,920 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:41:50,795 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:41:50,796 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:41:50,796 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:41:50,796 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:41:50,867 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:41:52,299 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:52,797 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:41:57,299 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:41:57,797 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:02,300 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:02,798 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:07,300 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:07,798 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:09,929 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:42:09,930 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:42:09,930 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:42:09,930 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:42:10,870 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:42:11,871 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:42:12,301 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:12,930 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:17,302 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:17,931 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:18,921 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:42:22,302 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:23,922 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:27,303 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:28,922 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:29,959 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:42:29,959 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:42:29,959 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:42:29,960 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:42:30,875 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:42:32,303 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:33,960 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:37,304 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:38,961 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:42,304 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:43,961 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:47,305 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:48,921 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:42:49,084 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:42:49,084 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:42:49,084 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:42:49,084 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:49,085 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:42:49,879 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:42:52,306 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:54,085 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:42:57,306 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:42:59,086 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:02,307 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:04,086 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:07,307 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:08,189 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:43:08,190 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:43:08,190 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:43:08,190 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:43:08,883 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:43:09,191 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:12,308 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:14,191 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:17,308 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:18,922 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:43:19,922 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:22,309 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:24,923 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:27,289 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:43:27,289 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:43:27,289 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:43:27,290 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:43:27,310 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:27,887 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:43:30,290 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:32,310 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:35,291 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:37,311 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:40,291 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:42,311 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:45,292 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:46,423 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:43:46,423 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:43:46,424 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:43:46,424 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:43:46,891 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:43:47,312 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:48,926 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:43:50,926 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:52,312 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:43:55,927 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:43:57,313 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:00,927 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:02,313 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:05,560 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:44:05,561 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:44:05,561 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:44:05,561 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:44:05,894 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:44:06,561 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:07,314 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:11,562 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:12,314 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:16,562 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:17,315 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:18,923 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:44:21,923 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:22,315 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:24,680 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:44:24,681 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:44:24,681 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:44:24,682 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:44:24,898 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:44:27,316 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:27,683 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:32,317 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:32,683 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:37,317 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:37,684 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:42,318 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:42,684 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:43,810 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:44:43,810 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:44:43,810 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:44:43,811 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:44:43,902 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:44:47,318 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:47,811 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:48,923 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:44:52,319 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:52,924 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:44:57,319 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:44:57,924 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:02,320 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:02,919 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:45:02,919 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:45:02,920 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:45:02,921 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:45:03,906 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:45:03,921 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:07,320 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:08,922 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:12,321 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:13,922 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:17,322 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:18,923 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:18,924 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:45:21,998 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:45:21,998 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:45:21,999 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:45:21,999 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:45:22,322 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:22,910 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:45:23,911 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:45:23,999 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:27,323 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:29,000 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:32,323 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:34,000 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:37,324 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:39,001 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:42,143 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:45:42,143 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:45:42,143 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:45:42,144 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:45:42,324 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:42,915 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:45:44,145 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:47,325 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:48,924 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:45:49,925 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:52,326 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:54,925 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:45:57,326 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:45:59,926 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:01,259 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:46:01,259 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:46:01,260 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:46:01,260 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:46:01,919 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:46:02,326 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:05,260 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:07,327 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:10,261 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:12,328 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:15,261 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:17,328 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:18,925 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:46:20,376 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:46:20,377 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:46:20,377 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:46:20,377 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:20,377 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:46:20,923 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:46:22,329 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:25,378 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:27,329 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:30,379 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:32,330 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:35,379 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:37,330 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:39,493 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:46:39,494 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:46:39,494 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:46:39,494 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:46:39,927 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:46:40,495 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:42,331 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:45,495 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:47,331 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:48,925 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:46:50,926 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:52,332 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:55,926 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:46:57,332 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:46:58,620 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:46:58,621 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:46:58,621 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:46:58,621 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:46:58,931 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:47:01,622 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:02,333 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:06,622 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:07,333 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:11,623 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:12,334 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:16,623 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:17,334 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:17,758 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:47:17,758 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:47:17,758 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:47:17,759 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:47:17,934 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:47:18,926 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:47:21,926 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:22,335 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:26,927 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:27,335 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:31,927 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:32,336 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:36,895 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:47:36,896 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:47:36,896 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:47:36,896 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:47:36,938 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:47:37,337 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:37,897 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:42,337 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:42,897 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:47,338 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:47,898 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:48,926 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:47:52,338 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:52,927 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:47:56,035 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:47:56,036 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:47:56,036 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:47:56,036 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:47:56,942 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:47:57,339 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:47:58,036 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:02,340 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:03,037 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:07,340 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:08,037 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:12,341 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:13,038 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:15,181 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:48:15,182 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:48:15,182 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:48:15,182 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:48:15,946 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:48:17,341 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:18,182 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:18,926 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:48:22,342 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:23,927 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:27,342 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:28,928 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:32,343 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:33,928 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:48:34,322 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:48:34,322 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:48:34,322 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:48:34,323 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:48:34,950 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:48:36,509 DEBUG   SenderThread:87725 [sender.py:send():336] send: files
+2024-02-24 15:48:36,509 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: partial_history
+2024-02-24 15:48:36,509 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file media/images/Confusion Matrix_50_7c46268d798fee7a2a4c.png with policy now
+2024-02-24 15:48:36,510 DEBUG   SenderThread:87725 [sender.py:send():336] send: history
+2024-02-24 15:48:36,510 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 15:48:36,511 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:48:36,965 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:48:36,966 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/media/images/Confusion Matrix_50_7c46268d798fee7a2a4c.png
+2024-02-24 15:48:36,966 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/media/images
+2024-02-24 15:48:36,967 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/media
+2024-02-24 15:48:37,144 INFO    wandb-upload_0:87725 [upload_job.py:push():138] Uploaded file /tmp/tmp7756m6dwwandb/stkqs0sk-media/images/Confusion Matrix_50_7c46268d798fee7a2a4c.png
+2024-02-24 15:48:37,732 INFO    wandb-upload_0:87725 [upload_job.py:push():138] Uploaded file /tmp/tmp7756m6dwwandb/k5ljzqfs-media/images/Confusion Matrix_50_7c46268d798fee7a2a4c.png
+2024-02-24 15:48:37,808 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:37,808 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:37,966 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:48:39,200 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: log_artifact
+2024-02-24 15:48:39,200 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: log_artifact
+2024-02-24 15:48:41,146 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: poll_exit
+2024-02-24 15:48:46,147 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:51,149 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:48:56,151 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:01,152 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:06,154 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:11,156 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:16,157 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:21,159 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:26,160 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:31,162 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:36,164 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:41,165 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:46,167 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:51,169 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:49:56,170 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:01,172 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:06,174 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:11,176 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:16,177 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:21,179 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:26,180 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:31,182 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:36,183 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:41,185 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:46,187 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:51,188 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:50:56,190 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:01,191 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:06,193 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:11,195 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:16,196 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:21,198 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:26,200 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:31,201 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:36,203 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:41,204 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:46,206 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:51,208 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:51:56,209 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:01,211 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:06,213 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:11,214 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:16,216 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:21,218 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:26,219 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:31,221 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:36,223 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:41,225 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:42,769 INFO    wandb-upload_0:87725 [upload_job.py:push():96] Uploaded file /home/edramos/.local/share/wandb/artifacts/staging/tmpqptnbc99
+2024-02-24 15:52:43,820 INFO    SenderThread:87725 [sender.py:send_request_log_artifact():1381] logged artifact deit3_base_patch16_224 - {'id': 'QXJ0aWZhY3Q6NzMwOTQzMzk0', 'digest': 'bc046463cb8aa0644ca611927bd372de', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE0Mjc0NjQ4Mw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NzMwOTIwOTE0', 'versionIndex': 0}}, 'version': 'latest'}
+2024-02-24 15:52:43,820 DEBUG   SenderThread:87725 [sender.py:send():336] send: telemetry
+2024-02-24 15:52:43,820 DEBUG   SenderThread:87725 [sender.py:send():336] send: exit
+2024-02-24 15:52:43,820 INFO    SenderThread:87725 [sender.py:send_exit():559] handling exit code: 0
+2024-02-24 15:52:43,820 INFO    SenderThread:87725 [sender.py:send_exit():561] handling runtime: 981
+2024-02-24 15:52:43,821 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:52:43,821 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:52:43,821 INFO    SenderThread:87725 [sender.py:send_exit():567] send defer
+2024-02-24 15:52:43,821 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: poll_exit
+2024-02-24 15:52:43,821 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,822 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:43,823 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 0
+2024-02-24 15:52:43,823 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:43,823 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 0
+2024-02-24 15:52:43,823 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 1
+2024-02-24 15:52:43,823 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:43,823 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 1
+2024-02-24 15:52:43,824 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:43,824 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 1
+2024-02-24 15:52:43,824 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 2
+2024-02-24 15:52:43,824 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:43,824 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 2
+2024-02-24 15:52:43,824 INFO    HandlerThread:87725 [system_monitor.py:finish():161] Stopping system monitor
+2024-02-24 15:52:43,825 DEBUG   SystemMonitor:87725 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2024-02-24 15:52:43,825 DEBUG   SystemMonitor:87725 [system_monitor.py:_start():141] Publishing last batch of metrics
+2024-02-24 15:52:43,825 INFO    HandlerThread:87725 [interfaces.py:finish():175] Joined cpu
+2024-02-24 15:52:43,825 INFO    HandlerThread:87725 [interfaces.py:finish():175] Joined disk
+2024-02-24 15:52:43,849 INFO    HandlerThread:87725 [interfaces.py:finish():175] Joined gpu
+2024-02-24 15:52:43,849 INFO    HandlerThread:87725 [interfaces.py:finish():175] Joined memory
+2024-02-24 15:52:43,849 INFO    HandlerThread:87725 [interfaces.py:finish():175] Joined network
+2024-02-24 15:52:43,849 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:43,849 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 2
+2024-02-24 15:52:43,849 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 3
+2024-02-24 15:52:43,849 DEBUG   SenderThread:87725 [sender.py:send():336] send: stats
+2024-02-24 15:52:43,849 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:43,849 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 3
+2024-02-24 15:52:43,850 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:43,850 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 3
+2024-02-24 15:52:43,850 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 4
+2024-02-24 15:52:43,850 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:43,850 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 4
+2024-02-24 15:52:43,850 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:43,850 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 4
+2024-02-24 15:52:43,850 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 5
+2024-02-24 15:52:43,850 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:43,850 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 5
+2024-02-24 15:52:43,850 DEBUG   SenderThread:87725 [sender.py:send():336] send: summary
+2024-02-24 15:52:43,850 INFO    SenderThread:87725 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 15:52:43,850 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:43,850 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 5
+2024-02-24 15:52:43,850 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 6
+2024-02-24 15:52:43,851 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:43,851 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 6
+2024-02-24 15:52:43,851 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:43,851 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 6
+2024-02-24 15:52:43,853 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 15:52:44,035 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 7
+2024-02-24 15:52:44,035 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:44,035 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 7
+2024-02-24 15:52:44,036 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:44,036 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 7
+2024-02-24 15:52:44,118 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/config.yaml
+2024-02-24 15:52:44,118 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:52:45,791 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 8
+2024-02-24 15:52:45,792 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:45,792 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 8
+2024-02-24 15:52:45,793 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:45,793 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 8
+2024-02-24 15:52:45,802 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 9
+2024-02-24 15:52:45,803 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:45,803 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 9
+2024-02-24 15:52:45,804 DEBUG   SenderThread:87725 [sender.py:send():336] send: artifact
+2024-02-24 15:52:46,119 INFO    Thread-13 :87725 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:52:46,226 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: keepalive
+2024-02-24 15:52:46,559 INFO    SenderThread:87725 [sender.py:send_artifact():1417] sent artifact job-https___github.com_edramos-lab_ImageClassification-MFG.git_main.py - {'id': 'QXJ0aWZhY3Q6NzMwODk1MTg3', 'digest': 'd5dfca429ca61afadfe63903d59eea3c', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_edramos-lab_ImageClassification-MFG.git_main.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_edramos-lab_ImageClassification-MFG.git_main.py', 'alias': 'v1'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE0MjczOTIxOA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NzMwODk1MTg3', 'versionIndex': 1}}, 'version': 'v1'}
+2024-02-24 15:52:46,559 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:46,559 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 9
+2024-02-24 15:52:46,559 INFO    SenderThread:87725 [dir_watcher.py:finish():362] shutting down directory watcher
+2024-02-24 15:52:47,121 INFO    SenderThread:87725 [dir_watcher.py:finish():392] scan: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files
+2024-02-24 15:52:47,121 INFO    SenderThread:87725 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log output.log
+2024-02-24 15:52:47,121 INFO    SenderThread:87725 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json wandb-summary.json
+2024-02-24 15:52:47,121 INFO    SenderThread:87725 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/requirements.txt requirements.txt
+2024-02-24 15:52:47,122 INFO    SenderThread:87725 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/conda-environment.yaml conda-environment.yaml
+2024-02-24 15:52:47,122 INFO    SenderThread:87725 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-metadata.json wandb-metadata.json
+2024-02-24 15:52:47,122 INFO    SenderThread:87725 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/config.yaml config.yaml
+2024-02-24 15:52:47,131 INFO    SenderThread:87725 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/media/images/Confusion Matrix_50_7c46268d798fee7a2a4c.png media/images/Confusion Matrix_50_7c46268d798fee7a2a4c.png
+2024-02-24 15:52:47,132 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 10
+2024-02-24 15:52:47,136 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:47,137 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 10
+2024-02-24 15:52:47,142 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:47,142 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 10
+2024-02-24 15:52:47,142 INFO    SenderThread:87725 [file_pusher.py:finish():162] shutting down file pusher
+2024-02-24 15:52:47,559 INFO    wandb-upload_2:87725 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/wandb-summary.json
+2024-02-24 15:52:47,564 INFO    wandb-upload_0:87725 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/requirements.txt
+2024-02-24 15:52:47,620 INFO    wandb-upload_1:87725 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/output.log
+2024-02-24 15:52:47,632 INFO    wandb-upload_4:87725 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/config.yaml
+2024-02-24 15:52:47,759 INFO    wandb-upload_3:87725 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/files/conda-environment.yaml
+2024-02-24 15:52:47,960 INFO    Thread-12 :87725 [sender.py:transition_state():587] send defer: 11
+2024-02-24 15:52:47,960 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:47,961 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 11
+2024-02-24 15:52:47,961 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:47,961 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 11
+2024-02-24 15:52:47,961 INFO    SenderThread:87725 [file_pusher.py:join():167] waiting for file pusher
+2024-02-24 15:52:47,962 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 12
+2024-02-24 15:52:47,962 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:47,962 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 12
+2024-02-24 15:52:47,963 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:47,963 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 12
+2024-02-24 15:52:48,258 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 13
+2024-02-24 15:52:48,258 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:48,259 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 13
+2024-02-24 15:52:48,259 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:48,259 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 13
+2024-02-24 15:52:48,259 INFO    SenderThread:87725 [sender.py:transition_state():587] send defer: 14
+2024-02-24 15:52:48,260 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 15:52:48,260 INFO    HandlerThread:87725 [handler.py:handle_request_defer():170] handle defer: 14
+2024-02-24 15:52:48,261 DEBUG   SenderThread:87725 [sender.py:send():336] send: final
+2024-02-24 15:52:48,261 DEBUG   SenderThread:87725 [sender.py:send():336] send: footer
+2024-02-24 15:52:48,261 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: defer
+2024-02-24 15:52:48,261 INFO    SenderThread:87725 [sender.py:send_request_defer():583] handle sender defer: 14
+2024-02-24 15:52:48,263 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: poll_exit
+2024-02-24 15:52:48,263 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: server_info
+2024-02-24 15:52:48,264 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: get_summary
+2024-02-24 15:52:48,265 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: sampled_history
+2024-02-24 15:52:48,267 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: poll_exit
+2024-02-24 15:52:48,267 DEBUG   SenderThread:87725 [sender.py:send_request():363] send_request: server_info
+2024-02-24 15:52:48,413 DEBUG   HandlerThread:87725 [handler.py:handle_request():144] handle_request: shutdown
+2024-02-24 15:52:48,414 INFO    HandlerThread:87725 [handler.py:finish():841] shutting down handler
+2024-02-24 15:52:49,264 INFO    WriterThread:87725 [datastore.py:close():299] close: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_153218-do900m94/run-do900m94.wandb
+2024-02-24 15:52:49,412 INFO    SenderThread:87725 [sender.py:finish():1493] shutting down sender
+2024-02-24 15:52:49,412 INFO    SenderThread:87725 [file_pusher.py:finish():162] shutting down file pusher
+2024-02-24 15:52:49,413 INFO    SenderThread:87725 [file_pusher.py:join():167] waiting for file pusher

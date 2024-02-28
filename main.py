@@ -1,6 +1,11 @@
 
+from itertools import cycle
 from matplotlib import pyplot as plt
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from itertools import cycle
+import torch.nn.functional as F
 from torchvision.datasets import ImageFolder
 from torchvision.transforms import Compose, Resize, RandomHorizontalFlip, RandomVerticalFlip, RandomRotation, ColorJitter, ToTensor, Normalize
 from torch.utils.data import DataLoader, Subset
@@ -16,9 +21,10 @@ from torchvision.transforms import Compose, Resize, RandomHorizontalFlip, Random
 from collections import Counter
 from sklearn.model_selection import KFold
 import wandb
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, precision_score, recall_score, f1_score, matthews_corrcoef
+from sklearn.metrics import accuracy_score, auc, classification_report, confusion_matrix, precision_score, recall_score, f1_score, matthews_corrcoef, roc_curve
 import seaborn as sns
 import argparse
+import torch
 
 
 
@@ -235,24 +241,93 @@ def test_model(model, test_loader, architecture, optimizer, scheduler, batch_siz
     local_model_path = "local_model_{}.pth".format(architecture)
     torch.save(model.state_dict(), local_model_path)
 
+    roc_fig = auroc(model, test_loader, num_classes)
+    wandb.log({"ROC Curve": wandb.Image(roc_fig)})
+
     # Clean up CUDA memory
     torch.cuda.reset_max_memory_allocated()
     torch.cuda.empty_cache()
 
     wandb.finish()
 
+def auroc(model, test_loader, num_classes):
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    model.eval()
+    y_test = []
+    y_score = []
+    with torch.no_grad():
+        for i, (inputs, classes) in enumerate(test_loader):
+            inputs = inputs.to(device)
+            y_test.append(F.one_hot(classes, num_classes).numpy())
+
+            try:
+                bs, ncrops, c, h, w = inputs.size()
+            except:
+                bs, c, h, w = inputs.size()
+                ncrops = 1
+            if ncrops > 1:
+                outputs = model(inputs.view(-1, c, h, w))
+                outputs = outputs.view(bs, ncrops, -1).mean(1)
+            else:
+                outputs = model(inputs)
+            y_score.append(outputs.cpu().numpy())
+    y_test = np.array([t.ravel() for t in y_test])
+    y_score = np.array([t.ravel() for t in y_score])
+
+    # Compute ROC curve and ROC area for each class in each fold
+    fpr = dict()
+    tpr = dict()
+    local_roc_auc = dict()
+    for i in range(num_classes):
+        fpr[i], tpr[i], _ = roc_curve(np.array(y_test[:, i]), np.array(y_score[:, i]))
+        local_roc_auc[i] = auc(fpr[i], tpr[i])
+
+    # Compute micro-average ROC curve and ROC area
+    fpr["micro"], tpr["micro"], _ = roc_curve(y_test.ravel(), y_score.ravel())
+    local_roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
+
+    # Compute macro-average ROC curve and ROC area
+    all_fpr = np.unique(np.concatenate([fpr[i] for i in range(num_classes)]))
+    mean_tpr = np.zeros_like(all_fpr)
+    for i in range(num_classes):
+        mean_tpr += np.interp(all_fpr, fpr[i], tpr[i])
+    mean_tpr /= num_classes
+    fpr["macro"] = all_fpr
+    tpr["macro"] = mean_tpr
+    local_roc_auc["macro"] = auc(fpr["macro"], tpr["macro"])
+
+    # Plot ROC curve
+    plt.figure(figsize=(12, 10))
+    plt.plot(fpr["micro"], tpr["micro"], label='micro-average ROC curve (area = {0:0.2f})'.format(local_roc_auc["micro"]), color='deeppink', linestyle=':', linewidth=2)
+    plt.plot(fpr["macro"], tpr["macro"], label='macro-average ROC curve (area = {0:0.2f})'.format(local_roc_auc["macro"]), color='navy', linestyle=':', linewidth=2)
+    for i in range(num_classes):
+        plt.plot(fpr[i], tpr[i], label='ROC curve of class {0} (area = {1:0.2f})'.format(i, local_roc_auc[i]))
+    plt.plot([0, 1], [0, 1], 'k--', linewidth=2)
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver Operating Characteristic')
+    plt.legend(loc="lower right")
+
+    # Save the plot as "roc_curve.png"
+
+    plt.savefig('roc_curve.png')
+    return plt
+
 
     
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False, default=2)
+    parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False, default=5)
     parser.add_argument('-epochs','--epochs', help='Number of epochs for training', required=False, default=10)
     parser.add_argument('-model','--model', help='Name of the model architecture: "efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"', required=False, default="efficientnet_b0")
-    parser.add_argument('-lr','--lr', help='Learning rate for the optimizer', required=False, default=0.0001)
-    parser.add_argument('-batchsize','--batch_size', help='Batch size for training', required=False, default=8)
-    parser.add_argument('-ratio','--subset_ratio', help='subset_ratio of the dataset to be used as subset', required=False, default=0.1)
+    parser.add_argument('-lr','--lr', help='Learning rate for the optimizer', required=False, default=0.0001,type=float)
+    parser.add_argument('-batchsize','--batch_size', help='Batch size for training', required=False, default=8, type=int)
+    parser.add_argument('-ratio','--subset_ratio', help='subset_ratio of the dataset to be used as subset', required=False, default=0.1, type=float)
     parser.add_argument('-project','--project_name', help='Name of the project', required=False, default="MyProject")
+    parser.add_argument('-dataset','--dataset_folder', help='Path to the dataset folder', required=False,default="/home/edramos/Documents/MLOPS/ImageClassification-MFG/things-8")
 
     args = parser.parse_args()
 
@@ -262,11 +337,19 @@ if __name__ == '__main__':
     lr = args.lr
     batch_size = args.batch_size
     subset_ratio = args.subset_ratio
+    project_name = args.project_name
 
-    print(n_splits)
+    print(f"n_splits: {n_splits}, type: {type(n_splits)}")
+    print(f"epochs: {epochs}, type: {type(epochs)}")
+    print(f"model: {model}, type: {type(model)}")
+    print(f"lr: {lr}, type: {type(lr)}")
+    print(f"batch_size: {batch_size}, type: {type(batch_size)}")
+    print(f"subset_ratio: {subset_ratio}, type: {type(subset_ratio)}")
+    print(f"project_name: {project_name}, type: {type(project_name)}")
 
 
-    dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
+    #dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
+    dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/things-8'
     image_size = (224, 224)  # Example image size
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio)
 
@@ -282,11 +365,12 @@ if __name__ == '__main__':
         break  # Just to show the first batch from the subset
 
     #architectures = ["efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"]
-    architectures = ["efficientnet_b0"]
+    architecture= model
+    model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size,subset_ratio)
     test_loader = data_loaders['test']
-    for architecture in architectures:
-        model, optimizer, scheduler =train_model_kfold(subset_dataset, architecture, lr,n_splits,epochs, num_classes, batch_size)
-
+    '''for architecture in architectures:
+        model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
+    '''
     test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
     

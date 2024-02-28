@@ -1,0 +1,39 @@
+
+Training fold 1 for efficientnet_b0
+Training fold 2 for efficientnet_b0
+Training fold 3 for efficientnet_b0
+Training fold 4 for efficientnet_b0
+Training fold 5 for efficientnet_b0
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+Test accuracy: 50.000
+Confusion Matrix:
+ [[2 3 0 1 0 0 0 0 0 2 0]
+ [3 5 0 0 0 0 0 0 0 0 0]
+ [0 0 2 0 0 0 0 0 0 0 0]
+ [1 0 0 2 0 0 0 0 0 1 0]
+ [1 2 0 0 2 0 0 0 0 0 0]
+ [0 0 0 0 0 1 0 0 0 0 0]
+ [0 0 0 0 0 1 1 0 0 1 0]
+ [0 0 0 0 0 0 0 6 1 0 0]
+ [0 0 0 0 0 0 0 3 0 0 0]
+ [1 3 0 0 0 1 0 2 0 9 0]
+ [0 0 0 0 0 0 0 1 2 0 0]]
+Test Precision: 54.423077
+Test Recall: 50.000000
+Test F1 Score: 48.840780
+Matthews Correlation Coefficient: 42.509831
+Traceback (most recent call last):
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 371, in <module>
+    test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 244, in test_model
+    roc_fig = auroc(model, test_loader, num_classes)
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 287, in auroc
+    for i in range(N_classes):
+NameError: name 'N_classes' is not defined

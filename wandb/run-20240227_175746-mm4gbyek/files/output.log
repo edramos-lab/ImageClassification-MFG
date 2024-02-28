@@ -1,0 +1,33 @@
+
+Training fold 1 for efficientnet_b0
+Training fold 2 for efficientnet_b0
+Training fold 3 for efficientnet_b0
+Training fold 4 for efficientnet_b0
+Training fold 5 for efficientnet_b0
+Test accuracy: 11.667
+Confusion Matrix:
+ [[2 2 0 0 0 1 0 0 2 0 1]
+ [2 0 0 0 1 0 0 0 0 5 0]
+ [0 0 0 0 0 0 1 1 0 0 0]
+ [0 0 0 0 1 0 1 0 0 0 2]
+ [2 0 0 0 0 2 0 1 0 0 0]
+ [0 0 0 0 0 0 0 1 0 0 0]
+ [2 0 0 0 0 0 1 0 0 0 0]
+ [0 0 0 0 0 1 0 3 3 0 0]
+ [0 0 0 0 0 0 0 2 1 0 0]
+ [2 2 0 0 3 2 2 3 1 0 1]
+ [0 0 0 0 0 0 1 2 0 0 0]]
+Test Precision: 6.906593
+Test Recall: 11.666667
+Test F1 Score: 8.574074
+Matthews Correlation Coefficient: 1.767947
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/torch/cuda/memory.py:282: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(

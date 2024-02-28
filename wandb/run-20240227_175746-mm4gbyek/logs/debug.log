@@ -1,0 +1,32 @@
+2024-02-27 17:57:46,782 INFO    MainThread:667038 [wandb_setup.py:_flush():68] Configure stats pid to 667038
+2024-02-27 17:57:46,782 INFO    MainThread:667038 [wandb_setup.py:_flush():68] Loading settings from /home/edramos/.config/wandb/settings
+2024-02-27 17:57:46,782 INFO    MainThread:667038 [wandb_setup.py:_flush():68] Loading settings from /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/settings
+2024-02-27 17:57:46,782 INFO    MainThread:667038 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2024-02-27 17:57:46,782 INFO    MainThread:667038 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py'}
+2024-02-27 17:57:46,782 INFO    MainThread:667038 [wandb_init.py:_log_setup():492] Logging user logs to /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240227_175746-mm4gbyek/logs/debug.log
+2024-02-27 17:57:46,783 INFO    MainThread:667038 [wandb_init.py:_log_setup():493] Logging internal logs to /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240227_175746-mm4gbyek/logs/debug-internal.log
+2024-02-27 17:57:46,783 INFO    MainThread:667038 [wandb_init.py:init():532] calling init triggers
+2024-02-27 17:57:46,783 INFO    MainThread:667038 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'architecture': 'efficientnet_b0', 'epochs': 10, 'batch_size': 8}
+2024-02-27 17:57:46,783 INFO    MainThread:667038 [wandb_init.py:init():588] starting backend
+2024-02-27 17:57:46,783 INFO    MainThread:667038 [wandb_init.py:init():592] setting up manager
+2024-02-27 17:57:46,784 INFO    MainThread:667038 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-02-27 17:57:46,785 INFO    MainThread:667038 [wandb_init.py:init():599] backend started and connected
+2024-02-27 17:57:46,789 INFO    MainThread:667038 [wandb_init.py:init():687] updated telemetry
+2024-02-27 17:57:46,807 INFO    MainThread:667038 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2024-02-27 17:57:47,545 INFO    MainThread:667038 [wandb_run.py:_on_init():2134] communicating current version
+2024-02-27 17:57:50,653 INFO    MainThread:667038 [wandb_run.py:_on_init():2143] got version response upgrade_message: "wandb version 0.16.3 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-02-27 17:57:50,653 INFO    MainThread:667038 [wandb_init.py:init():775] starting run threads in backend
+2024-02-27 17:57:54,118 INFO    MainThread:667038 [wandb_run.py:_console_start():2114] atexit reg
+2024-02-27 17:57:54,118 INFO    MainThread:667038 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2024-02-27 17:57:54,118 INFO    MainThread:667038 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2024-02-27 17:57:54,118 INFO    MainThread:667038 [wandb_run.py:_redirect():2059] Redirects installed.
+2024-02-27 17:57:54,119 INFO    MainThread:667038 [wandb_init.py:init():817] run started, returning control to user process
+2024-02-27 18:00:58,598 INFO    MainThread:667038 [wandb_run.py:_finish():1854] finishing run edramos/MyProject/mm4gbyek
+2024-02-27 18:00:58,598 INFO    MainThread:667038 [wandb_run.py:_atexit_cleanup():2083] got exitcode: 0
+2024-02-27 18:00:58,598 INFO    MainThread:667038 [wandb_run.py:_restore():2066] restore
+2024-02-27 18:00:58,598 INFO    MainThread:667038 [wandb_run.py:_restore():2072] restore done
+2024-02-27 18:01:51,584 INFO    MainThread:667038 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2024-02-27 18:01:51,584 INFO    MainThread:667038 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2024-02-27 18:01:51,586 INFO    MainThread:667038 [wandb_run.py:_footer_sync_info():3398] logging synced files

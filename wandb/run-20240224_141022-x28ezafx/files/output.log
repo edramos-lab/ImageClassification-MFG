@@ -1,0 +1,10 @@
+
+Training fold 1 for c
+Traceback (most recent call last):
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 298, in <module>
+    model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 96, in train_model_kfold
+    model = timm.create_model(architecture, pretrained=True, num_classes=num_classes).to(device)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/timm/models/_factory.py", line 113, in create_model
+    raise RuntimeError('Unknown model (%s)' % model_name)
+RuntimeError: Unknown model (c)

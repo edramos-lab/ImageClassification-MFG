@@ -1,0 +1,134 @@
+{
+    "os": "Linux-5.15.0-97-generic-x86_64-with-glibc2.31",
+    "python": "3.9.16",
+    "heartbeatAt": "2024-02-28T01:38:37.345072",
+    "startedAt": "2024-02-28T01:38:36.791342",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "-lr",
+        "0.00001",
+        "-model",
+        "efficientnet_b0",
+        "-ratio",
+        "0.95",
+        "-batchsize",
+        "8"
+    ],
+    "state": "running",
+    "program": "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/edramos-lab/ImageClassification-MFG.git",
+        "commit": "7eb3ba843a5eb4a2139d81d8238b657d0ea9496f"
+    },
+    "email": "edgar.rene.ramos.acosta@uabc.edu.mx",
+    "root": "/home/edramos/Documents/MLOPS/ImageClassification-MFG",
+    "host": "edramos-nitro5",
+    "username": "edramos",
+    "executable": "/home/edramos/miniconda3/envs/tf/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2347.813,
+        "min": 800.0,
+        "max": 4600.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4114.011,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        }
+    ],
+    "disk": {
+        "total": 877.3084297180176,
+        "used": 148.54639053344727
+    },
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 31.122295379638672
+    }
+}

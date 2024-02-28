@@ -1,0 +1,45 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.10
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.16
+    start_time: 1708813968.056299
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      2:
+      - 1
+      - 5
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      3:
+      - 2
+      - 16
+      - 23
+      4: 3.9.16
+      5: 0.13.10
+      8:
+      - 5
+architecture:
+  desc: null
+  value: deit3_base_patch16_224
+batch_size:
+  desc: null
+  value: 1
+epochs:
+  desc: null
+  value: 10

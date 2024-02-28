@@ -1,0 +1,26 @@
+
+Training fold 1 for deit3_base_patch16_224
+Traceback (most recent call last):
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 369, in <module>
+    model, optimizer, scheduler =train_model_kfold(subset_dataset, project_name,architecture, lr,n_splits,epochs, num_classes, batch_size)
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 119, in train_model_kfold
+    outputs = model(images)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 704, in forward
+    x = self.forward_features(x)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 688, in forward_features
+    x = self.blocks(x)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 165, in forward
+    x = x + self.drop_path2(self.ls2(self.mlp(self.norm2(x))))
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/timm/models/vision_transformer.py", line 120, in forward
+    return x.mul_(self.gamma) if self.inplace else x * self.gamma
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB (GPU 0; 3.81 GiB total capacity; 2.15 GiB already allocated; 704.00 KiB free; 2.31 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

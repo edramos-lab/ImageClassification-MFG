@@ -1,0 +1,180 @@
+2024-02-24 14:03:31,791 INFO    StreamThr :29294 [internal.py:wandb_internal():87] W&B internal server running at pid: 29294, started at: 2024-02-24 14:03:31.790497
+2024-02-24 14:03:31,795 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: status
+2024-02-24 14:03:31,796 INFO    WriterThread:29294 [datastore.py:open_for_write():85] open: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/run-73djakgu.wandb
+2024-02-24 14:03:31,797 DEBUG   SenderThread:29294 [sender.py:send():336] send: header
+2024-02-24 14:03:31,808 DEBUG   SenderThread:29294 [sender.py:send():336] send: run
+2024-02-24 14:03:32,209 INFO    SenderThread:29294 [dir_watcher.py:__init__():216] watching files in: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files
+2024-02-24 14:03:32,210 INFO    SenderThread:29294 [sender.py:_start_run_threads():1067] run started: 73djakgu with start time 1708812211.789262
+2024-02-24 14:03:32,210 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: summary_record
+2024-02-24 14:03:32,210 INFO    SenderThread:29294 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 14:03:32,215 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: check_version
+2024-02-24 14:03:32,215 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: check_version
+2024-02-24 14:03:32,318 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: run_start
+2024-02-24 14:03:32,331 DEBUG   HandlerThread:29294 [system_info.py:__init__():31] System info init
+2024-02-24 14:03:32,332 DEBUG   HandlerThread:29294 [system_info.py:__init__():46] System info init done
+2024-02-24 14:03:32,332 INFO    HandlerThread:29294 [system_monitor.py:start():151] Starting system monitor
+2024-02-24 14:03:32,332 INFO    SystemMonitor:29294 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2024-02-24 14:03:32,332 INFO    HandlerThread:29294 [system_monitor.py:probe():172] Collecting system info
+2024-02-24 14:03:32,333 INFO    SystemMonitor:29294 [interfaces.py:start():168] Started cpu
+2024-02-24 14:03:32,335 INFO    SystemMonitor:29294 [interfaces.py:start():168] Started disk
+2024-02-24 14:03:32,336 INFO    SystemMonitor:29294 [interfaces.py:start():168] Started gpu
+2024-02-24 14:03:32,337 INFO    SystemMonitor:29294 [interfaces.py:start():168] Started memory
+2024-02-24 14:03:32,338 INFO    SystemMonitor:29294 [interfaces.py:start():168] Started network
+2024-02-24 14:03:32,369 DEBUG   HandlerThread:29294 [system_info.py:probe():195] Probing system
+2024-02-24 14:03:32,377 DEBUG   HandlerThread:29294 [system_info.py:_probe_git():180] Probing git
+2024-02-24 14:03:32,389 DEBUG   HandlerThread:29294 [system_info.py:_probe_git():188] Probing git done
+2024-02-24 14:03:32,389 DEBUG   HandlerThread:29294 [system_info.py:probe():241] Probing system done
+2024-02-24 14:03:32,390 DEBUG   HandlerThread:29294 [system_monitor.py:probe():181] {'os': 'Linux-5.15.0-97-generic-x86_64-with-glibc2.31', 'python': '3.9.16', 'heartbeatAt': '2024-02-24T22:03:32.369242', 'startedAt': '2024-02-24T22:03:31.777700', 'docker': None, 'cuda': None, 'args': ('-lr', '0.001', '-model', 'convnextv2_tiny'), 'state': 'running', 'program': '/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/edramos-lab/ImageClassification-MFG.git', 'commit': '7eb3ba843a5eb4a2139d81d8238b657d0ea9496f'}, 'email': 'edgar.rene.ramos.acosta@uabc.edu.mx', 'root': '/home/edramos/Documents/MLOPS/ImageClassification-MFG', 'host': 'edramos-nitro5', 'username': 'edramos', 'executable': '/home/edramos/miniconda3/envs/tf/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2230.1601875, 'min': 800.0, 'max': 4600.0}, 'cpu_freq_per_core': [{'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 1182.563, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}, {'current': 2300.0, 'min': 800.0, 'max': 4600.0}], 'disk': {'total': 877.3084297180176, 'used': 145.78904342651367}, 'gpu': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 31.122295379638672}}
+2024-02-24 14:03:32,390 INFO    HandlerThread:29294 [system_monitor.py:probe():182] Finished collecting system info
+2024-02-24 14:03:32,390 INFO    HandlerThread:29294 [system_monitor.py:probe():185] Publishing system info
+2024-02-24 14:03:32,390 DEBUG   HandlerThread:29294 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-02-24 14:03:32,390 DEBUG   HandlerThread:29294 [system_info.py:_save_pip():67] Saving pip packages done
+2024-02-24 14:03:32,390 DEBUG   HandlerThread:29294 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-02-24 14:03:33,210 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/requirements.txt
+2024-02-24 14:03:33,210 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/wandb-summary.json
+2024-02-24 14:03:33,210 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/conda-environment.yaml
+2024-02-24 14:03:35,585 DEBUG   HandlerThread:29294 [system_info.py:_save_conda():86] Saving conda packages done
+2024-02-24 14:03:35,586 INFO    HandlerThread:29294 [system_monitor.py:probe():187] Finished publishing system info
+2024-02-24 14:03:35,587 DEBUG   SenderThread:29294 [sender.py:send():336] send: files
+2024-02-24 14:03:35,587 INFO    SenderThread:29294 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2024-02-24 14:03:35,591 DEBUG   SenderThread:29294 [sender.py:send():336] send: telemetry
+2024-02-24 14:03:35,592 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: stop_status
+2024-02-24 14:03:35,592 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: stop_status
+2024-02-24 14:03:36,185 INFO    wandb-upload_0:29294 [upload_job.py:push():138] Uploaded file /tmp/tmp23plygs0wandb/pef5n6q3-wandb-metadata.json
+2024-02-24 14:03:36,211 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/conda-environment.yaml
+2024-02-24 14:03:36,211 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/wandb-metadata.json
+2024-02-24 14:03:36,211 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_created():275] file/dir created: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/output.log
+2024-02-24 14:03:36,837 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 14:03:38,211 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/output.log
+2024-02-24 14:03:41,839 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 14:03:46,578 DEBUG   SenderThread:29294 [sender.py:send():336] send: exit
+2024-02-24 14:03:46,578 INFO    SenderThread:29294 [sender.py:send_exit():559] handling exit code: 1
+2024-02-24 14:03:46,578 INFO    SenderThread:29294 [sender.py:send_exit():561] handling runtime: 14
+2024-02-24 14:03:46,579 INFO    SenderThread:29294 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 14:03:46,579 INFO    SenderThread:29294 [sender.py:send_exit():567] send defer
+2024-02-24 14:03:46,579 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,579 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 0
+2024-02-24 14:03:46,579 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,579 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 0
+2024-02-24 14:03:46,579 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 1
+2024-02-24 14:03:46,579 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,579 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 1
+2024-02-24 14:03:46,579 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,579 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 1
+2024-02-24 14:03:46,580 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 2
+2024-02-24 14:03:46,580 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,580 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 2
+2024-02-24 14:03:46,580 INFO    HandlerThread:29294 [system_monitor.py:finish():161] Stopping system monitor
+2024-02-24 14:03:46,580 DEBUG   SystemMonitor:29294 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2024-02-24 14:03:46,580 INFO    HandlerThread:29294 [interfaces.py:finish():175] Joined cpu
+2024-02-24 14:03:46,581 INFO    HandlerThread:29294 [interfaces.py:finish():175] Joined disk
+2024-02-24 14:03:46,581 DEBUG   SystemMonitor:29294 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2024-02-24 14:03:46,581 DEBUG   SystemMonitor:29294 [system_monitor.py:_start():141] Publishing last batch of metrics
+2024-02-24 14:03:46,603 INFO    HandlerThread:29294 [interfaces.py:finish():175] Joined gpu
+2024-02-24 14:03:46,603 INFO    HandlerThread:29294 [interfaces.py:finish():175] Joined memory
+2024-02-24 14:03:46,603 INFO    HandlerThread:29294 [interfaces.py:finish():175] Joined network
+2024-02-24 14:03:46,603 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,603 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 2
+2024-02-24 14:03:46,603 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 3
+2024-02-24 14:03:46,603 DEBUG   SenderThread:29294 [sender.py:send():336] send: stats
+2024-02-24 14:03:46,603 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,603 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 3
+2024-02-24 14:03:46,603 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,603 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 3
+2024-02-24 14:03:46,603 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 4
+2024-02-24 14:03:46,604 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,604 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 4
+2024-02-24 14:03:46,604 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,604 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 4
+2024-02-24 14:03:46,604 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 5
+2024-02-24 14:03:46,604 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,604 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 5
+2024-02-24 14:03:46,604 DEBUG   SenderThread:29294 [sender.py:send():336] send: summary
+2024-02-24 14:03:46,604 INFO    SenderThread:29294 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-02-24 14:03:46,604 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,604 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 5
+2024-02-24 14:03:46,604 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 6
+2024-02-24 14:03:46,604 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,604 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 6
+2024-02-24 14:03:46,604 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,604 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 6
+2024-02-24 14:03:46,607 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: status_report
+2024-02-24 14:03:46,774 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 7
+2024-02-24 14:03:46,775 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:46,775 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 7
+2024-02-24 14:03:46,776 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:46,776 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 7
+2024-02-24 14:03:47,216 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/wandb-summary.json
+2024-02-24 14:03:47,216 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/config.yaml
+2024-02-24 14:03:47,578 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: poll_exit
+2024-02-24 14:03:48,584 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 8
+2024-02-24 14:03:48,585 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: poll_exit
+2024-02-24 14:03:48,585 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:48,585 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 8
+2024-02-24 14:03:48,587 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:48,587 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 8
+2024-02-24 14:03:48,592 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 9
+2024-02-24 14:03:48,592 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:48,592 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 9
+2024-02-24 14:03:48,592 DEBUG   SenderThread:29294 [sender.py:send():336] send: artifact
+2024-02-24 14:03:49,217 INFO    Thread-13 :29294 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/output.log
+2024-02-24 14:03:49,377 INFO    SenderThread:29294 [sender.py:send_artifact():1417] sent artifact job-https___github.com_edramos-lab_ImageClassification-MFG.git_main.py - {'id': 'QXJ0aWZhY3Q6NzMwODkyMjY1', 'digest': 'f651c8a5d7a08a6c57a52c3387b3edaf', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_edramos-lab_ImageClassification-MFG.git_main.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_edramos-lab_ImageClassification-MFG.git_main.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE0MjczOTIxOA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NzMwODkyMjY1', 'versionIndex': 0}}, 'version': 'v0'}
+2024-02-24 14:03:49,377 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:49,377 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 9
+2024-02-24 14:03:49,377 INFO    SenderThread:29294 [dir_watcher.py:finish():362] shutting down directory watcher
+2024-02-24 14:03:50,218 INFO    SenderThread:29294 [dir_watcher.py:finish():392] scan: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files
+2024-02-24 14:03:50,219 INFO    SenderThread:29294 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/output.log output.log
+2024-02-24 14:03:50,219 INFO    SenderThread:29294 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/wandb-summary.json wandb-summary.json
+2024-02-24 14:03:50,219 INFO    SenderThread:29294 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/requirements.txt requirements.txt
+2024-02-24 14:03:50,219 INFO    SenderThread:29294 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/conda-environment.yaml conda-environment.yaml
+2024-02-24 14:03:50,219 INFO    SenderThread:29294 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/wandb-metadata.json wandb-metadata.json
+2024-02-24 14:03:50,219 INFO    SenderThread:29294 [dir_watcher.py:finish():406] scan save: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/config.yaml config.yaml
+2024-02-24 14:03:50,220 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 10
+2024-02-24 14:03:50,220 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:50,221 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 10
+2024-02-24 14:03:50,237 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:50,239 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 10
+2024-02-24 14:03:50,239 INFO    SenderThread:29294 [file_pusher.py:finish():162] shutting down file pusher
+2024-02-24 14:03:50,622 INFO    wandb-upload_4:29294 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/config.yaml
+2024-02-24 14:03:50,714 INFO    wandb-upload_3:29294 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/conda-environment.yaml
+2024-02-24 14:03:50,721 INFO    wandb-upload_2:29294 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/requirements.txt
+2024-02-24 14:03:50,752 INFO    wandb-upload_1:29294 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/output.log
+2024-02-24 14:03:51,853 INFO    wandb-upload_0:29294 [upload_job.py:push():138] Uploaded file /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/files/wandb-summary.json
+2024-02-24 14:03:52,054 INFO    Thread-12 :29294 [sender.py:transition_state():587] send defer: 11
+2024-02-24 14:03:52,055 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:52,055 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 11
+2024-02-24 14:03:52,056 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:52,056 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 11
+2024-02-24 14:03:52,056 INFO    SenderThread:29294 [file_pusher.py:join():167] waiting for file pusher
+2024-02-24 14:03:52,056 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 12
+2024-02-24 14:03:52,056 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:52,056 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 12
+2024-02-24 14:03:52,057 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:52,057 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 12
+2024-02-24 14:03:52,146 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 13
+2024-02-24 14:03:52,146 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:52,146 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 13
+2024-02-24 14:03:52,147 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:52,147 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 13
+2024-02-24 14:03:52,147 INFO    SenderThread:29294 [sender.py:transition_state():587] send defer: 14
+2024-02-24 14:03:52,148 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: defer
+2024-02-24 14:03:52,148 INFO    HandlerThread:29294 [handler.py:handle_request_defer():170] handle defer: 14
+2024-02-24 14:03:52,148 DEBUG   SenderThread:29294 [sender.py:send():336] send: final
+2024-02-24 14:03:52,149 DEBUG   SenderThread:29294 [sender.py:send():336] send: footer
+2024-02-24 14:03:52,149 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: defer
+2024-02-24 14:03:52,149 INFO    SenderThread:29294 [sender.py:send_request_defer():583] handle sender defer: 14
+2024-02-24 14:03:52,150 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: poll_exit
+2024-02-24 14:03:52,151 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: server_info
+2024-02-24 14:03:52,151 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: poll_exit
+2024-02-24 14:03:52,153 DEBUG   SenderThread:29294 [sender.py:send_request():363] send_request: server_info
+2024-02-24 14:03:52,157 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: get_summary
+2024-02-24 14:03:52,157 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: sampled_history
+2024-02-24 14:03:52,295 INFO    MainThread:29294 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2024-02-24 14:03:52,295 INFO    MainThread:29294 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2024-02-24 14:03:52,295 INFO    MainThread:29294 [wandb_run.py:_footer_sync_info():3398] logging synced files
+2024-02-24 14:03:52,296 DEBUG   HandlerThread:29294 [handler.py:handle_request():144] handle_request: shutdown
+2024-02-24 14:03:52,296 INFO    HandlerThread:29294 [handler.py:finish():841] shutting down handler
+2024-02-24 14:03:53,152 INFO    WriterThread:29294 [datastore.py:close():299] close: /home/edramos/Documents/MLOPS/ImageClassification-MFG/wandb/run-20240224_140331-73djakgu/run-73djakgu.wandb
+2024-02-24 14:03:53,295 INFO    SenderThread:29294 [sender.py:finish():1493] shutting down sender
+2024-02-24 14:03:53,295 INFO    SenderThread:29294 [file_pusher.py:finish():162] shutting down file pusher
+2024-02-24 14:03:53,295 INFO    SenderThread:29294 [file_pusher.py:join():167] waiting for file pusher

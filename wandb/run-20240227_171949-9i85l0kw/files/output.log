@@ -1,0 +1,59 @@
+
+Training fold 1 for efficientnet_b0
+Training fold 2 for efficientnet_b0
+Training fold 3 for efficientnet_b0
+Training fold 4 for efficientnet_b0
+Training fold 5 for efficientnet_b0
+Test accuracy: 56.667
+Confusion Matrix:
+ [[6 1 0 0 0 0 0 0 0 1 0]
+ [2 6 0 0 0 0 0 0 0 0 0]
+ [0 0 2 0 0 0 0 0 0 0 0]
+ [0 0 0 1 0 0 1 0 0 2 0]
+ [0 0 0 1 2 1 0 0 0 1 0]
+ [1 0 0 0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 1 1 0 0 1 0]
+ [0 0 0 1 0 0 0 5 1 0 0]
+ [0 0 0 0 0 0 0 2 1 0 0]
+ [3 3 0 0 0 0 0 1 0 9 0]
+ [0 0 0 0 0 0 0 0 2 0 1]]
+Test Precision: 61.740079
+Test Recall: 56.666667
+Test F1 Score: 56.595238
+Matthews Correlation Coefficient: 49.935995
+Traceback (most recent call last):
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 371, in <module>
+    test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
+  File "/home/edramos/Documents/MLOPS/ImageClassification-MFG/main.py", line 245, in test_model
+    wandb.log({"ROC Curve": roc_fig})
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 371, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 334, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1713, in log
+    self._log(data=data, step=step, commit=commit)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1495, in _log
+    self._partial_history_callback(data, step, commit)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/wandb_run.py", line 1365, in _partial_history_callback
+    self._backend.interface.publish_partial_history(
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/interface/interface.py", line 568, in publish_partial_history
+    data = history_dict_to_json(run, data, step=user_step, ignore_copy_err=True)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/data_types/utils.py", line 52, in history_dict_to_json
+    payload[key] = val_to_json(
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/data_types/utils.py", line 80, in val_to_json
+    val = Plotly.make_plot_media(val)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/sdk/data_types/plotly.py", line 49, in make_plot_media
+    val = util.matplotlib_to_plotly(val)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/wandb/util.py", line 637, in matplotlib_to_plotly
+    return tools.mpl_to_plotly(obj)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/plotly/tools.py", line 111, in mpl_to_plotly
+    matplotlylib.Exporter(renderer).run(fig)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/plotly/matplotlylib/mplexporter/exporter.py", line 53, in run
+    self.crawl_fig(fig)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/plotly/matplotlylib/mplexporter/exporter.py", line 124, in crawl_fig
+    self.crawl_ax(ax)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/plotly/matplotlylib/mplexporter/exporter.py", line 146, in crawl_ax
+    self.draw_collection(ax, collection)
+  File "/home/edramos/miniconda3/envs/tf/lib/python3.9/site-packages/plotly/matplotlylib/mplexporter/exporter.py", line 289, in draw_collection
+    offset_order = offset_dict[collection.get_offset_position()]
+AttributeError: 'QuadMesh' object has no attribute 'get_offset_position'
