@@ -1,1 +1,0 @@
-{"fold": 5, "epoch": 6, "train_loss": 0.3882118308115317, "train_accuracy": 86.80351906158357, "val_accuracy": 81.17647058823529, "_timestamp": 1709086982.7054162, "_runtime": 950.5171632766724, "_step": 45, "_wandb": {"runtime": 3601}}
