@@ -320,7 +320,7 @@ def auroc(model, test_loader, num_classes):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False, default=5)
+    parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False, default=5,type=int)
     parser.add_argument('-epochs','--epochs', help='Number of epochs for training', required=False, default=10)
     parser.add_argument('-model','--model', help='Name of the model architecture: "efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"', required=False, default="efficientnet_b0")
     parser.add_argument('-lr','--lr', help='Learning rate for the optimizer', required=False, default=0.0001,type=float)
