@@ -338,6 +338,7 @@ if __name__ == '__main__':
     batch_size = args.batch_size
     subset_ratio = args.subset_ratio
     project_name = args.project_name
+    dataset_folder = args.dataset_folder
 
     print(f"n_splits: {n_splits}, type: {type(n_splits)}")
     print(f"epochs: {epochs}, type: {type(epochs)}")
@@ -346,10 +347,12 @@ if __name__ == '__main__':
     print(f"batch_size: {batch_size}, type: {type(batch_size)}")
     print(f"subset_ratio: {subset_ratio}, type: {type(subset_ratio)}")
     print(f"project_name: {project_name}, type: {type(project_name)}")
+    print(f"dataset_folder: {dataset_folder}, type: {type(dataset_folder)}")    
 
 
     #dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/nigel-chassises-1'
-    dataset_folder = '/home/edramos/Documents/MLOPS/ImageClassification-MFG/things-8'
+    if dataset_folder == None:
+        dataset_folder = '/content/ImageClassification-MFG/things-8'
     image_size = (224, 224)  # Example image size
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_ratio)
 
@@ -370,5 +373,5 @@ if __name__ == '__main__':
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size,subset_ratio)
     test_loader = data_loaders['test']
 
-    test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
+    test_model(dataset_path,model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
     
