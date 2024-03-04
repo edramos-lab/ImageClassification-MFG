@@ -100,7 +100,7 @@ def train_model_kfold(subset_dataset, project_name,architecture,lr, n_splits,epo
         
         # Model initialization
         model = timm.create_model(architecture, pretrained=True, num_classes=num_classes).to(device)
-        optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-5)
+        optimizer = torch.optim.Adam(model.parameters(), lr=lr)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=10)
         criterion = nn.CrossEntropyLoss()
 
