@@ -321,7 +321,7 @@ def auroc(model, test_loader, num_classes):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-nsplits','--n_splits', help='Total of splits where the dataset will be divided', required=False, default=5,type=int)
-    parser.add_argument('-epochs','--epochs', help='Number of epochs for training', required=False, default=10)
+    parser.add_argument('-epochs','--epochs', help='Number of epochs for training', required=False, default=10,type=int)
     parser.add_argument('-model','--model', help='Name of the model architecture: "efficientnet_b0", "inception_v4", "swin_tiny_patch4_window7_224", "convnextv2_tiny", "xception41", "deit3_base_patch16_224"', required=False, default="efficientnet_b0")
     parser.add_argument('-lr','--lr', help='Learning rate for the optimizer', required=False, default=0.0001,type=float)
     parser.add_argument('-batchsize','--batch_size', help='Batch size for training', required=False, default=8, type=int)
@@ -373,5 +373,5 @@ if __name__ == '__main__':
     data_loaders, subset_dataset, balancing_efficiency, num_classes = preprocess_and_load_data(dataset_folder, image_size, batch_size,subset_ratio)
     test_loader = data_loaders['test']
 
-    test_model(dataset_path,model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
+    test_model(model, test_loader, architecture, optimizer, scheduler, batch_size, image_size)
     
