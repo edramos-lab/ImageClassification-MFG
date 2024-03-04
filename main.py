@@ -81,7 +81,7 @@ def preprocess_and_load_data(dataset_folder, image_size, batch_size, subset_rati
     class_counts = Counter([train_dataset.targets[i] for i in indices])
     max_samples = max(class_counts.values())
     balancing_efficiency = len(indices) / (num_classes * max_samples)
-
+    print(f"Balancing efficiency: {balancing_efficiency}")
     return {
         'train': train_loader,
         'val': val_loader,
